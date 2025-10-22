@@ -1,8 +1,24 @@
-## Things you need to do:
+# NFT Membership Badges
 
-- Project.sol file - Rename this file and add the solidity code inside it.
-- deploy.js file - Add the deploy.js (javascript) code inside it.
-- .env.example - Add the Private Key of your MetaMask Wallet's account.
-- Readme.md file - Add the Readme content inside this file.
-- package.json file – Replace the `"name"` property value from `"Project-Title"` to your actual project title. <br/>
-*Example:* `"name": "crowdfunding-smartcontract"`
+A decentralized membership system where membership is represented as NFTs (ERC-721). This project mints non‑fungible "membership badges" that prove access, perks, or roles. Badges can be transferred or revoked, and metadata (images, attributes) is stored on IPFS.
+
+---
+
+## Features
+- Membership represented as ERC-721 NFTs (unique badges)
+- Per-badge metadata on IPFS (image, tier, expiry, perks)
+- Controlled minting by authorized issuer(s)
+- Transfer, revoke, and query membership state
+- Frontend examples for wallet interaction and badge management
+- Deployable to Polygon (Mumbai) for low-cost testing
+
+---
+
+## How it works (high level)
+- Each badge is an NFT token with a tokenURI pointing to IPFS-hosted metadata.
+- The contract exposes minting and revocation functions restricted to an issuer role.
+- Frontend interacts via Ethers.js + MetaMask to request mints, check ownership, and display badge metadata.
+
+---
+
+## Project structure
