@@ -4,7 +4,7 @@ A decentralized membership system where membership is represented as NFTs (ERC-7
 
 ---
 
-## Features
+## Feature
 - Membership represented as ERC-721 NFTs (unique badges)
 - Per-badge metadata on IPFS (image, tier, expiry, perks)
 - Controlled minting by authorized issuer(s)
