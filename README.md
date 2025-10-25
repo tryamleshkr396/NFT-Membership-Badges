@@ -22,3 +22,9 @@ A decentralized membership system where membership is represented as NFTs (ERC-7
 ---
 
 ## Project structure
+/contracts/project.sol
+/scripts/deploy.js
+/test/lock.js
+
+
+
