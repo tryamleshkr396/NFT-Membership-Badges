@@ -19,12 +19,6 @@ A decentralized membership system where membership is represented as NFTs (ERC-7
 - The contract exposes minting and revocation functions restricted to an issuer role.
 - Frontend interacts via Ethers.js + MetaMask to request mints, check ownership, and display badge metadata.
 
----
-
-## Project structure
-/contracts/project.sol
-/scripts/deploy.js
-/test/lock.js
 
 
 
