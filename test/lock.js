@@ -53,7 +53,7 @@ describe("MembershipBadges", function () {
 
   describe("Badge Issuance", function () {
     it("Should allow issuer to mint a badge", async function () {
-      const tokenURI = `${BASE_URI}bronze/1`;
+      const tokenURI = "ipfs://QmYourTokenURI/bronze/1";
       
       await expect(
         membershipBadges.connect(issuer).issueBadge(user1.address, BRONZE, 0, tokenURI)
@@ -71,14 +71,14 @@ describe("MembershipBadges", function () {
     });
 
     it("Should set correct membership info when issuing badge", async function () {
-      const tokenURI = `${BASE_URI}silver/1`;
-      const currentTime = await time.latest();
-      
-      await membershipBadges.connect(issuer).issueBadge(user1.address, SILVER, 0, tokenURI);
+      const tokenURI = "ipfs://QmYourTokenURI/silver/1";
+      const tx = await membershipBadges.connect(issuer).issueBadge(user1.address, SILVER, 0, tokenURI);
+      const receipt = await tx.wait();
+      const currentTime = (await ethers.provider.getBlock(receipt.blockNumber)).timestamp;
       
       const membershipInfo = await membershipBadges.getMembershipInfo(1);
       expect(membershipInfo.tier).to.equal(SILVER);
-      expect(membershipInfo.issuedAt).to.be.closeTo(currentTime, 10);
+      expect(membershipInfo.issuedAt).to.equal(currentTime);
       expect(membershipInfo.expiresAt).to.equal(currentTime + 90 * 24 * 60 * 60); // 90 days for silver
       expect(membershipInfo.isActive).to.be.true;
       expect(membershipInfo.issuer).to.equal(issuer.address);
