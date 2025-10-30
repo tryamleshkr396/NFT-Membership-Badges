@@ -10,6 +10,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 /// @title NFT Membership Badges - Enhanced ERC721 with membership tiers and expiry
 /// @notice This contract manages membership badges with different tiers and expiration dates
 /// @dev Implements ERC721, AccessControl, and Pausable for comprehensive membership management
+/// @author NFT Membership Team
 contract MembershipBadges is ERC721, ERC721URIStorage, AccessControl, Pausable {
     using Counters for Counters.Counter;
 
