@@ -17,4 +17,7 @@ To create a transparent and decentralized membership ecosystem where badges are 
 - On-chain upgradeable membership tiers.
 - Marketplace integration for badge trading.
 
+
 ## Contract Details
+0x4B31f4C6A1165eFE50e3011354Cb99785dB7fA5d
+<img width="1791" height="861" alt="image" src="https://github.com/user-attachments/assets/060c00b2-8859-400e-b263-8a9c80ac035b" />
